@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --color-dnbkr-black: #0a0a0a;
+  --color-dnbkr-accent: #0080ff;
+
+  --spacing-nav: 4.5rem;
+
+  --text-display: 2.25rem;
+  --text-display--line-height: 1.15;
+  --text-display--letter-spacing: 0.04em;
+  --text-display--font-weight: 300;
+
+  --text-lead: 1rem;
+  --text-lead--line-height: 1.75;
+  --text-lead--font-weight: 300;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-white font-sans text-neutral-900 antialiased;
+}
+
+@layer components {
+  .dnbkr-nav-height {
+    height: var(--spacing-nav);
+  }
+
+  .dnbkr-main-offset {
+    padding-top: var(--spacing-nav);
+  }
+
+  .dnbkr-display {
+    font-size: var(--text-display);
+    line-height: var(--text-display--line-height);
+    letter-spacing: var(--text-display--letter-spacing);
+    font-weight: var(--text-display--font-weight);
+  }
+
+  .dnbkr-lead {
+    font-size: var(--text-lead);
+    line-height: var(--text-lead--line-height);
+    font-weight: var(--text-lead--font-weight);
+  }
+
+  .dnbkr-section-title {
+    @apply text-xl font-light tracking-wide text-neutral-900;
+  }
+
+  .dnbkr-link {
+    @apply text-dnbkr-accent underline-offset-4 transition-colors duration-200 hover:text-neutral-700 hover:underline;
+  }
+
+  .dnbkr-back-link {
+    @apply inline-flex items-center gap-2 text-sm font-light tracking-wide text-neutral-500 transition-colors duration-200 hover:text-dnbkr-accent;
+  }
+
+  .motion-safe-transition {
+    @apply transition-[opacity,transform,colors] duration-300 ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe-transition {
+    transition: none;
+  }
+}
