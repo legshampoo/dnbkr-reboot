@@ -294,8 +294,8 @@ export const workProjects: Project[] = [
     category: 'work',
     title: 'AT&T "Teleporter"',
     subtitle: '360° Video Projections at SXSW',
-    thumb: '/images/teleporter/teleporter_01.png',
-    hero: '/images/teleporter/teleporter_01.png',
+    thumb: '/images/experiential/teleporter/teleporter_01.png',
+    hero: '/images/experiential/teleporter/teleporter_01.png',
     summary:
       'For AT&T\'s installation at South by Southwest, we designed a 360° video projection system for their "Teleporter" dome. Customers were able to choose their destination with a touch screen interface, and "teleport" to different attractions around Austin, Texas, which were shot in a first person view using a spherical lens.',
     order: 10,
