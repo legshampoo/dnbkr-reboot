@@ -101,7 +101,7 @@ export const artProjects: Project[] = [
     category: 'art',
     title: 'Patriotic School Chair',
     thumb: '/images/art/american_chair/chair_thumb.jpg',
-    hero: '/images/chair.jpg',
+    hero: '/images/art/american_chair/chair.jpg',
     summary:
       'Reclaimed wooden school chair, covered in encaustic wax, finished with epoxy resin.',
     order: 7,
@@ -111,13 +111,13 @@ export const artProjects: Project[] = [
     slug: 'resin',
     category: 'art',
     title: 'Resin',
-    thumb: '/images/resin_blue.png',
+    thumb: '/images/art/resin/resin_thumb.png',
+    hero: '/images/art/resin/resin_blue.png',
     summary: '',
     order: 8,
     sections: [
-      { layout: 'full-width', image: '/images/resin_blue.png' },
-      { layout: 'full-width', image: '/images/resin_chemicals.png' },
-      { layout: 'full-width', image: '/images/resin_electric.png' },
+      { layout: 'full-width', image: '/images/art/resin/resin_chemicals.png' },
+      { layout: 'full-width', image: '/images/art/resin/resin_electric.png' },
     ],
   },
 ]

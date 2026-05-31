@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import { ContactForm } from '@/components/ContactForm'
 import { ProfilePhoto } from '@/components/ProfilePhoto'
-import { contactProfile } from '@/data/contact'
+import { SocialLinks } from '@/components/SocialLinks'
+import { contactProfile, socialLinks } from '@/data/contact'
 
 export function ContactPage() {
   useEffect(() => {
@@ -34,19 +35,15 @@ export function ContactPage() {
               {contactProfile.role}
             </p>
           </div>
-          <div className="mt-8 space-y-4 border-t border-neutral-200/80 pt-8">
-            {contactProfile.bio.map((paragraph, i) => (
-              <p
-                key={i}
-                className="text-sm leading-relaxed font-light text-neutral-600"
-              >
-                {paragraph}
-              </p>
-            ))}
+          <div className="mt-8 text-center lg:text-left">
+            <SocialLinks links={socialLinks} />
           </div>
         </aside>
 
         <section className="border-t border-neutral-200/80 pt-12 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-16">
+          <p className="mb-12 max-w-2xl whitespace-pre-line text-sm leading-relaxed font-light text-neutral-600">
+            {contactProfile.bio}
+          </p>
           <h2 className="dnbkr-section-title mb-2">Send a message</h2>
           <p className="mb-8 text-sm font-light text-neutral-500">
             Share a short note about your project, timeline, or team. No pitch

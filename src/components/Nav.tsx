@@ -19,11 +19,11 @@ export function Nav() {
           DNBKR
         </NavLink>
         <div className="flex items-center gap-2">
-          <NavLink to="/art" className={linkClass}>
-            Art
-          </NavLink>
           <NavLink to="/work" className={linkClass}>
             Client work
+          </NavLink>
+          <NavLink to="/art" className={linkClass}>
+            Art
           </NavLink>
           <NavLink to="/contact" className={linkClass}>
             Contact

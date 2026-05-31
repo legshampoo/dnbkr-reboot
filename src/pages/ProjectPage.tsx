@@ -72,7 +72,7 @@ export function ProjectPage({ category }: { category: ProjectCategory }) {
     )
   }
 
-  const showHero = project.hero && project.slug !== 'resin'
+  const showHero = Boolean(project.hero)
 
   return (
     <article>
