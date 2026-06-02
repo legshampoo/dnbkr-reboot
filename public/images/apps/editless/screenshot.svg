@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Workflow UI placeholder">
+  <rect width="960" height="540" fill="#fafafa"/>
+  <rect x="24" y="24" width="200" height="492" rx="4" fill="#fff" stroke="#e5e5e5"/>
+  <rect x="240" y="24" width="696" height="48" rx="4" fill="#fff" stroke="#e5e5e5"/>
+  <rect x="240" y="88" width="696" height="428" rx="4" fill="#fff" stroke="#e5e5e5"/>
+  <rect x="48" y="56" width="120" height="10" rx="2" fill="#0080ff" opacity="0.5"/>
+  <rect x="48" y="88" width="152" height="8" rx="2" fill="#e5e5e5"/>
+  <rect x="48" y="108" width="140" height="8" rx="2" fill="#e5e5e5"/>
+  <rect x="48" y="128" width="148" height="8" rx="2" fill="#e5e5e5"/>
+  <text x="588" y="310" text-anchor="middle" fill="#a3a3a3" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="300">Replace with product screenshot</text>
+</svg>

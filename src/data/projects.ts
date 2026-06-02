@@ -1,7 +1,13 @@
+import { appProjectToProject, appsProjects } from './appsProjects'
 import { artProjects } from './artProjects'
 import { workProjects } from './workProjects'
 
 export type {
+  AppProject,
+  AppProjectChallenge,
+  AppProjectDiagramStep,
+  AppProjectMeta,
+  AppProjectSolutionDiagram,
   Project,
   ProjectCategory,
   ProjectLink,
@@ -9,7 +15,22 @@ export type {
   SectionLayout,
 } from './types'
 
-export const projects = [...workProjects, ...artProjects]
+export { appsProjects, getAppProject } from './appsProjects'
+
+export const projects = [
+  ...workProjects,
+  ...artProjects,
+  ...appsProjects.map(appProjectToProject),
+]
+
+export const categoryMeta: Record<
+  import('./types').ProjectCategory,
+  { path: string; label: string }
+> = {
+  work: { path: '/work', label: 'Client work' },
+  art: { path: '/art', label: 'Art' },
+  apps: { path: '/apps', label: 'Apps' },
+}
 
 export function getProjectsByCategory(
   category: import('./types').ProjectCategory,
@@ -27,6 +48,5 @@ export function getProject(
 }
 
 export function projectPath(project: import('./types').Project): string {
-  const base = project.category === 'work' ? '/work' : '/art'
-  return `${base}/${project.slug}`
+  return `${categoryMeta[project.category].path}/${project.slug}`
 }

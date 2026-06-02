@@ -65,6 +65,23 @@ body {
   .motion-safe-transition {
     @apply transition-[opacity,transform,colors] duration-300 ease-out;
   }
+
+  .mermaid-chart {
+    margin-inline: auto;
+  }
+
+  .mermaid-chart svg {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .mermaid-chart .node rect {
+    rx: 6;
+    ry: 6;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

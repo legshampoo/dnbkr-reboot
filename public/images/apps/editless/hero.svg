@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-label="Editless Studio">
+  <rect width="1200" height="500" fill="#f5f5f5"/>
+  <rect x="80" y="60" width="1040" height="380" rx="4" fill="#fff" stroke="#e5e5e5"/>
+  <rect x="120" y="100" width="320" height="24" rx="2" fill="#e5e5e5"/>
+  <rect x="120" y="140" width="480" height="12" rx="2" fill="#f5f5f5"/>
+  <rect x="120" y="160" width="420" height="12" rx="2" fill="#f5f5f5"/>
+  <rect x="120" y="220" width="960" height="180" rx="2" fill="#0a0a0a" opacity="0.06"/>
+  <text x="600" y="320" text-anchor="middle" fill="#525252" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="300" letter-spacing="0.06em">EDITLESS STUDIO</text>
+</svg>

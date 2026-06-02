@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Demo placeholder">
+  <rect width="960" height="540" fill="#171717"/>
+  <circle cx="480" cy="270" r="48" fill="none" stroke="#0080ff" stroke-width="2"/>
+  <polygon points="468,248 468,292 508,270" fill="#0080ff"/>
+  <text x="480" y="360" text-anchor="middle" fill="#737373" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="300">Demo video / GIF placeholder</text>
+</svg>

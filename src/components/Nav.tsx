@@ -25,6 +25,9 @@ export function Nav() {
           <NavLink to="/art" className={linkClass}>
             Art
           </NavLink>
+          <NavLink to="/apps" className={linkClass}>
+            Apps
+          </NavLink>
           <NavLink to="/contact" className={linkClass}>
             Contact
           </NavLink>

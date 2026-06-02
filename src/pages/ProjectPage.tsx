@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ProjectSections } from '@/components/ProjectSections'
 import type { ProjectCategory } from '@/data/projects'
-import { getProject } from '@/data/projects'
+import { categoryMeta, getProject } from '@/data/projects'
 
 type ProjectPageParams = {
   slug: string
@@ -49,8 +49,7 @@ function SummaryBlock({
 export function ProjectPage({ category }: { category: ProjectCategory }) {
   const { slug } = useParams() as ProjectPageParams
   const project = getProject(category, slug)
-  const listPath = category === 'work' ? '/work' : '/art'
-  const listLabel = category === 'work' ? 'Client work' : 'Art'
+  const { path: listPath, label: listLabel } = categoryMeta[category]
 
   useEffect(() => {
     if (project) {
