@@ -28,12 +28,16 @@ rsync -a ../update.dnbkr.com/public/img/ public/images/
 
 | Path | Page |
 |------|------|
-| `/` | Client work grid (home) |
-| `/work` | Client work grid |
-| `/work/:slug` | Project detail |
+| `/` | Experiences grid (home) |
+| `/experiences` | Experiences grid |
+| `/experiences/:slug` | Experience project detail |
+| `/products` | Products grid |
+| `/products/:slug` | Product project detail |
 | `/art` | Art grid |
-| `/art/:slug` | Project detail |
+| `/art/:slug` | Art project detail |
 | `/contact` | Contact |
+
+Legacy URLs `/work` and `/apps` redirect to `/experiences` and `/products`.
 
 ## Content
 

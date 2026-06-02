@@ -27,9 +27,9 @@ export const categoryMeta: Record<
   import('./types').ProjectCategory,
   { path: string; label: string }
 > = {
-  work: { path: '/work', label: 'Client work' },
+  work: { path: '/experiences', label: 'Experiences' },
+  apps: { path: '/products', label: 'Products' },
   art: { path: '/art', label: 'Art' },
-  apps: { path: '/apps', label: 'Apps' },
 }
 
 export function getProjectsByCategory(
