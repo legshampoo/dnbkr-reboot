@@ -1,7 +1,7 @@
 /** Edit copy and profile image path here. */
 export const contactProfile = {
   name: 'Dan Baker',
-  role: 'Creative technologist · FDE',
+  role: 'Creative Technologist • Forward Deployed Engineer FDE',
   /** Replace with your headshot at public/images/profile.jpg (falls back to profile.svg). */
   imageSrc: '/images/profile.jpg',
   imageAlt: 'Dan Baker',
@@ -31,15 +31,19 @@ export const socialLinks: SocialLink[] = [
     href: 'https://www.linkedin.com/in/dan-baker-ai/',
   },
   {
-    label: 'Instagram @dans.party',
+    label: '@dans.party on Instagram',
     href: 'https://www.instagram.com/dans.party/',
   },
   {
-    label: 'Instagram @mantra.verse',
+    label: '@mantra.verse visuals on Instagram',
     href: 'https://www.instagram.com/mantra.verse/',
   },
   {
-    label: 'YouTube @danbaker.podcast',
+    label: 'AI Tech Tutorials on Youtube',
+    href: 'https://www.youtube.com/@dan-baker',
+  },
+  {
+    label: 'Dan Baker Podcast on Youtube',
     href: 'https://www.youtube.com/@danbaker.podcast',
   },
   {
