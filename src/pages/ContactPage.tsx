@@ -3,12 +3,13 @@ import { ContactForm } from '@/components/ContactForm'
 import { ProfilePhoto } from '@/components/ProfilePhoto'
 import { SocialLinks } from '@/components/SocialLinks'
 import { contactProfile, socialLinks } from '@/data/contact'
+import { SITE_NAME } from '@/data/site'
 
 export function ContactPage() {
   useEffect(() => {
-    document.title = 'Contact — DNBKR'
+    document.title = `Contact — ${SITE_NAME}`
     return () => {
-      document.title = 'DNBKR'
+      document.title = SITE_NAME
     }
   }, [])
 

@@ -16,7 +16,7 @@ export function Nav() {
           to="/"
           className="dnbkr-display text-[1.35rem] tracking-[0.28em] text-white no-underline motion-safe-transition hover:text-neutral-200"
         >
-          DNBKR
+          Dan Baker
         </NavLink>
         <div className="flex items-center gap-2">
           <NavLink to="/experiences" className={linkClass}>

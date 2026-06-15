@@ -3,7 +3,7 @@ import { Resend } from 'resend'
 
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? 'daniel.c.baker@gmail.com'
 const FROM_EMAIL =
-  process.env.CONTACT_FROM_EMAIL ?? 'DNBKR Contact <onboarding@resend.dev>'
+  process.env.CONTACT_FROM_EMAIL ?? 'Dan Baker <onboarding@resend.dev>'
 
 type ContactBody = {
   name?: string
@@ -58,7 +58,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     from: FROM_EMAIL,
     to: TO_EMAIL,
     replyTo: email,
-    subject: `DNBKR — ${subject}`,
+    subject: `Dan Baker — ${subject}`,
     text: [
       `Name: ${name}`,
       `Email: ${email}`,

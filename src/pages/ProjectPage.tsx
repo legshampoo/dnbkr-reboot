@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { ProjectSections } from '@/components/ProjectSections'
 import type { ProjectCategory } from '@/data/projects'
 import { categoryMeta, getProject } from '@/data/projects'
+import { SITE_NAME } from '@/data/site'
 
 type ProjectPageParams = {
   slug: string
@@ -53,10 +54,10 @@ export function ProjectPage({ category }: { category: ProjectCategory }) {
 
   useEffect(() => {
     if (project) {
-      document.title = `${project.title} — DNBKR`
+      document.title = `${project.title} — ${SITE_NAME}`
     }
     return () => {
-      document.title = 'DNBKR'
+      document.title = SITE_NAME
     }
   }, [project])
 

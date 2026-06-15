@@ -5,8 +5,9 @@ import { AppProjectText } from '@/components/app-project/AppProjectText'
 import { ArchitectureDiagram } from '@/components/app-project/ArchitectureDiagram'
 import { SolutionDiagram } from '@/components/app-project/SolutionDiagram'
 import { VideoEmbed } from '@/components/VideoEmbed'
-import { categoryMeta } from '@/data/projects'
 import { getAppProject } from '@/data/appsProjects'
+import { categoryMeta } from '@/data/projects'
+import { SITE_NAME } from '@/data/site'
 
 export function AppProjectPage() {
   const { slug } = useParams<{ slug: string }>()
@@ -15,10 +16,10 @@ export function AppProjectPage() {
 
   useEffect(() => {
     if (project) {
-      document.title = `${project.title} — DNBKR`
+      document.title = `${project.title} — ${SITE_NAME}`
     }
     return () => {
-      document.title = 'DNBKR'
+      document.title = SITE_NAME
     }
   }, [project])
 

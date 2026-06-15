@@ -1,8 +1,8 @@
-# DNBKR Portfolio
+# Dan Baker — danbaker.studio
 
-Modern rebuild of [dnbkr.com](https://dnbkr.com) — Vite, React, TypeScript, Tailwind, deployed on Vercel.
+Portfolio site for [danbaker.studio](https://danbaker.studio) — Vite, React, TypeScript, Tailwind, deployed on Vercel.
 
-Legacy reference site lives in `../update.dnbkr.com` (not used at runtime).
+Legacy [dnbkr.com](https://dnbkr.com) redirects here. Reference assets from `../update.dnbkr.com` (not used at runtime).
 
 ## Setup
 
@@ -61,5 +61,5 @@ Copy and profile photo: edit `src/data/contact.ts`. Add a headshot at `public/im
 
 1. Import this `dnbkr` folder as a new Vercel project.
 2. Framework preset: **Vite**.
-3. Add `dnbkr.com` in Domains when ready.
+3. Add `danbaker.studio` in Domains (`dnbkr.com` can redirect to it).
 4. `vercel.json` handles SPA routing and leaves `/api/*` to serverless functions.
