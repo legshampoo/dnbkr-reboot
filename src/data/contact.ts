@@ -1,17 +1,17 @@
 /** Edit copy and profile image path here. */
 export const contactProfile = {
   name: 'Dan Baker',
-  role: 'Creative Technologist • Forward Deployed Engineer FDE',
+  role: 'AI Product Engineer',
   /** Replace with your headshot at public/images/profile.jpg (falls back to profile.svg). */
   imageSrc: '/images/profile.jpg',
   imageAlt: 'Dan Baker',
   availability:
-    'Building AI-powered products, agentic systems, and interactive experiences.',
-  bio: `Dan is an engineer and creative technologist focused on AI-powered products, real-time systems, and interactive experiences. He works closely with teams to turn ambiguous ideas into shipped software, blending technical execution with product thinking and rapid iteration.
+    'Designing, building, and launching AI-powered products, agents, and internal tools for founders and teams.',
+  bio: `Dan is an AI product engineer who works with founders, startups, and teams to turn ambiguous ideas into shipped software—from AI agents and internal tools to full-stack applications and voice systems.
 
-Based in Southeast Asia and working globally, his background spans creative technology, immersive media, and live experiences—from large-scale installations and generative systems to full-stack applications, automation, and AI-driven tools.
+His background combines product thinking, software engineering, and client-facing delivery across startups, experiential technology, and large-scale interactive installations. Based in Southeast Asia and working globally, he has led the design and deployment of custom technology for global brands, agencies, and cultural institutions.
 
-He is available for select opportunities, collaborations, and forward-deployed engineering roles. If you're building something ambitious and need someone who can move from concept to deployment, get in touch.
+He is available for contract engagements, forward-deployed roles, and select collaborations. If you're building an AI product, automation system, or technical prototype—or hiring for a product engineering role—get in touch.
 `,
 }
 
@@ -31,23 +31,15 @@ export const socialLinks: SocialLink[] = [
     href: 'https://www.linkedin.com/in/dan-baker-ai/',
   },
   {
-    label: '@dans.party on Instagram',
+    label: 'GitHub',
+    href: 'https://github.com/legshampoo',
+  },
+  {
+    label: 'Instagram',
     href: 'https://www.instagram.com/dans.party/',
   },
   {
-    label: '@mantra.verse visuals on Instagram',
-    href: 'https://www.instagram.com/mantra.verse/',
-  },
-  {
-    label: 'AI Tech Tutorials on Youtube',
+    label: 'Youtube',
     href: 'https://www.youtube.com/@dan-baker',
-  },
-  {
-    label: 'Dan Baker Podcast on Youtube',
-    href: 'https://www.youtube.com/@danbaker.podcast',
-  },
-  {
-    label: 'SoundCloud @dans.party',
-    href: 'https://soundcloud.com/dans-party',
   },
 ]

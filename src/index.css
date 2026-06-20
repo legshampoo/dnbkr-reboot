@@ -3,8 +3,12 @@
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 
-  --color-dnbkr-black: #0a0a0a;
+  --color-dnbkr-black: #1c1b18;
   --color-dnbkr-accent: #0080ff;
+  --color-dnbkr-bg: #f4f2ec;
+  --color-dnbkr-surface: #faf8f4;
+  --color-dnbkr-muted: #eae7e0;
+  --color-dnbkr-border: #d8d4cb;
 
   --spacing-nav: 4.5rem;
 
@@ -25,7 +29,7 @@ body,
 }
 
 body {
-  @apply bg-white font-sans text-neutral-900 antialiased;
+  @apply bg-dnbkr-bg font-sans text-neutral-900 antialiased;
 }
 
 @layer components {
@@ -56,6 +60,22 @@ body {
 
   .dnbkr-link {
     @apply text-dnbkr-accent underline-offset-4 transition-colors duration-200 hover:text-neutral-700 hover:underline;
+  }
+
+  .dnbkr-btn {
+    @apply inline-flex items-center justify-center rounded-sm px-6 py-3 text-sm font-light tracking-[0.08em] uppercase transition-[opacity,transform,colors] duration-300 ease-out;
+  }
+
+  .dnbkr-btn-primary {
+    @apply inline-flex items-center justify-center rounded-sm px-6 py-3 text-sm font-light tracking-[0.08em] uppercase transition-[opacity,transform,colors] duration-300 ease-out bg-dnbkr-accent text-white hover:bg-[#0066cc];
+  }
+
+  .dnbkr-btn-secondary {
+    @apply inline-flex items-center justify-center rounded-sm px-6 py-3 text-sm font-light tracking-[0.08em] uppercase transition-[opacity,transform,colors] duration-300 ease-out border border-current hover:bg-white/10;
+  }
+
+  .dnbkr-btn-secondary-light {
+    @apply inline-flex items-center justify-center rounded-sm px-6 py-3 text-sm font-light tracking-[0.08em] uppercase transition-[opacity,transform,colors] duration-300 ease-out border border-dnbkr-border text-neutral-700 hover:border-neutral-400 hover:text-neutral-900;
   }
 
   .dnbkr-back-link {

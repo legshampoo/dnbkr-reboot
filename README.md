@@ -28,7 +28,7 @@ rsync -a ../update.dnbkr.com/public/img/ public/images/
 
 | Path | Page |
 |------|------|
-| `/` | Experiences grid (home) |
+| `/` | Landing page |
 | `/experiences` | Experiences grid |
 | `/experiences/:slug` | Experience project detail |
 | `/products` | Products grid |

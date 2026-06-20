@@ -7,7 +7,7 @@ export function ProfilePhoto() {
   const [src, setSrc] = useState(contactProfile.imageSrc)
 
   return (
-    <div className="mx-auto w-full max-w-[280px] overflow-hidden rounded-sm bg-neutral-100 shadow-sm ring-1 ring-neutral-200/80">
+    <div className="mx-auto w-full max-w-[280px] overflow-hidden rounded-sm bg-dnbkr-muted shadow-sm ring-1 ring-dnbkr-border/80">
       <div className="aspect-square w-full">
         <img
           src={src}

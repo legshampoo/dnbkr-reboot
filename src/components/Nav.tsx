@@ -1,7 +1,7 @@
 import { useEffect, useId, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
-const navItems = [
+export const navItems = [
   { to: '/experiences', label: 'Experiences' },
   { to: '/products', label: 'Products' },
   { to: '/art', label: 'Art' },

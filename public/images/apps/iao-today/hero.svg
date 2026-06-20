@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-label="IAO Today">
+  <rect width="1200" height="500" fill="#0a0a0a"/>
+  <rect x="80" y="60" width="1040" height="380" rx="4" fill="#141414" stroke="#262626"/>
+  <text x="600" y="240" text-anchor="middle" fill="#e5e5e5" font-family="Inter, system-ui, sans-serif" font-size="40" font-weight="300" letter-spacing="0.1em">IAO TODAY</text>
+  <text x="600" y="290" text-anchor="middle" fill="#737373" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="300">Events, activities, and local experiences</text>
+</svg>

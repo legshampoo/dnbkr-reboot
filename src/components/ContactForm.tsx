@@ -65,7 +65,7 @@ export function ContactForm() {
             type="text"
             required
             autoComplete="name"
-            className="w-full border border-neutral-200 bg-white px-4 py-3 text-sm font-light outline-none transition-colors focus:border-dnbkr-accent"
+            className="w-full border border-dnbkr-border bg-dnbkr-surface px-4 py-3 text-sm font-light outline-none transition-colors focus:border-dnbkr-accent"
           />
         </div>
         <div>
@@ -78,7 +78,7 @@ export function ContactForm() {
             type="email"
             required
             autoComplete="email"
-            className="w-full border border-neutral-200 bg-white px-4 py-3 text-sm font-light outline-none transition-colors focus:border-dnbkr-accent"
+            className="w-full border border-dnbkr-border bg-dnbkr-surface px-4 py-3 text-sm font-light outline-none transition-colors focus:border-dnbkr-accent"
           />
         </div>
       </div>
@@ -92,7 +92,7 @@ export function ContactForm() {
           name="subject"
           type="text"
           placeholder="Project, collaboration, or introduction"
-          className="w-full border border-neutral-200 bg-white px-4 py-3 text-sm font-light outline-none transition-colors placeholder:text-neutral-400 focus:border-dnbkr-accent"
+          className="w-full border border-dnbkr-border bg-dnbkr-surface px-4 py-3 text-sm font-light outline-none transition-colors placeholder:text-neutral-400 focus:border-dnbkr-accent"
         />
       </div>
 
@@ -106,7 +106,7 @@ export function ContactForm() {
           required
           rows={6}
           placeholder="A bit of context about your project or team helps."
-          className="w-full resize-y border border-neutral-200 bg-white px-4 py-3 text-sm font-light outline-none transition-colors placeholder:text-neutral-400 focus:border-dnbkr-accent"
+          className="w-full resize-y border border-dnbkr-border bg-dnbkr-surface px-4 py-3 text-sm font-light outline-none transition-colors placeholder:text-neutral-400 focus:border-dnbkr-accent"
         />
       </div>
 

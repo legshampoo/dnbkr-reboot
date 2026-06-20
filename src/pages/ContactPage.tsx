@@ -41,7 +41,7 @@ export function ContactPage() {
           </div>
         </aside>
 
-        <section className="border-t border-neutral-200/80 pt-12 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-16">
+        <section className="border-t border-dnbkr-border/80 pt-12 lg:border-t-0 lg:border-l lg:border-dnbkr-border/80 lg:pt-0 lg:pl-16">
           <p className="mb-12 max-w-2xl whitespace-pre-line text-sm leading-relaxed font-light text-neutral-600">
             {contactProfile.bio}
           </p>

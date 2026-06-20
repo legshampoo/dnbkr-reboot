@@ -1,7 +1,8 @@
 import { editlessStudio } from './apps/editless-studio'
+import { iaoToday } from './apps/iao-today'
 import type { AppProject, Project } from './types'
 
-export const appsProjects: AppProject[] = [editlessStudio]
+export const appsProjects: AppProject[] = [editlessStudio, iaoToday]
 
 export function appProjectToProject(app: AppProject): Project {
   return {

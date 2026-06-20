@@ -2,9 +2,16 @@ import type { SocialLink } from '@/data/contact'
 
 type SocialLinksProps = {
   links: SocialLink[]
+  tone?: 'default' | 'dark'
 }
 
-export function SocialLinks({ links }: SocialLinksProps) {
+const linkClass = {
+  default:
+    'text-sm font-light tracking-wide text-dnbkr-accent underline-offset-4 transition-colors duration-200 hover:text-neutral-700 hover:underline',
+  dark: 'text-sm font-light tracking-wide text-neutral-400 underline-offset-4 transition-colors duration-200 hover:text-white hover:underline',
+}
+
+export function SocialLinks({ links, tone = 'default' }: SocialLinksProps) {
   return (
     <ul className="space-y-3">
       {links.map((link) => (
@@ -13,7 +20,7 @@ export function SocialLinks({ links }: SocialLinksProps) {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-light tracking-wide text-dnbkr-accent underline-offset-4 transition-colors duration-200 hover:text-neutral-700 hover:underline"
+            className={linkClass[tone]}
           >
             {link.label}
           </a>
