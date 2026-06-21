@@ -1,6 +1,11 @@
 import { appProjectToProject, appsProjects } from './appsProjects'
 import { artProjects } from './artProjects'
+import {
+  portfolioFilterLabels,
+  workFilterTags,
+} from './portfolioPages'
 import { workProjects } from './workProjects'
+import type { PortfolioFilter, Project } from './types'
 
 export type {
   AppProject,
@@ -8,6 +13,7 @@ export type {
   AppProjectDiagramStep,
   AppProjectMeta,
   AppProjectSolutionDiagram,
+  PortfolioFilter,
   Project,
   ProjectCategory,
   ProjectLink,
@@ -30,6 +36,23 @@ export const categoryMeta: Record<
   work: { path: '/experiences', label: 'Experiences' },
   apps: { path: '/products', label: 'Products' },
   art: { path: '/art', label: 'Art' },
+}
+
+export function getProjectFilterTag(project: Project): PortfolioFilter {
+  if (project.filterTag) return project.filterTag
+  if (project.category === 'apps') return 'product'
+  if (project.category === 'art') return 'art'
+  return workFilterTags[project.slug] ?? 'experience'
+}
+
+export function getProjectFilterLabel(project: Project): string {
+  return portfolioFilterLabels[getProjectFilterTag(project)]
+}
+
+export function cardDescription(summary: string, maxLength = 120): string {
+  const text = summary.split('\n')[0]?.trim() ?? summary
+  if (text.length <= maxLength) return text
+  return `${text.slice(0, maxLength - 1).trim()}…`
 }
 
 export function getProjectsByCategory(

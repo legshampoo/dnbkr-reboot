@@ -1,6 +1,5 @@
-import { ProjectGrid } from '@/components/ProjectGrid'
-import { getProjectsByCategory } from '@/data/projects'
+import { ProjectListingPage } from '@/components/ProjectListingPage'
 
 export function AppsPage() {
-  return <ProjectGrid projects={getProjectsByCategory('apps')} />
+  return <ProjectListingPage category="apps" />
 }

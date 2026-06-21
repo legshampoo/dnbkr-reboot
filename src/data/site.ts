@@ -10,6 +10,8 @@ export function getSitemapPaths(): string[] {
     categoryMeta.work.path,
     categoryMeta.apps.path,
     categoryMeta.art.path,
+    '/services',
+    '/about',
     '/contact',
   ]
   const detail = projects.map((p) => projectPath(p))

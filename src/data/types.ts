@@ -1,5 +1,12 @@
 export type ProjectCategory = 'work' | 'art' | 'apps'
 
+export type PortfolioFilter =
+  | 'installation'
+  | 'digital'
+  | 'product'
+  | 'experience'
+  | 'art'
+
 export type SectionLayout =
   | 'image-left'
   | 'image-right'
@@ -28,6 +35,8 @@ export type Project = {
   thumb: string
   hero?: string
   summary: string
+  /** Portfolio grid filter tag — inferred from category when omitted. */
+  filterTag?: PortfolioFilter
   links?: ProjectLink[]
   order: number
   sections: ProjectSection[]

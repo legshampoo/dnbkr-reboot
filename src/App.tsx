@@ -1,11 +1,13 @@
 import { BrowserRouter, Navigate, Route, Routes, useParams } from 'react-router-dom'
 import { Layout } from '@/components/Layout'
+import { AboutPage } from '@/pages/AboutPage'
 import { AppsPage } from '@/pages/AppsPage'
 import { ArtPage } from '@/pages/ArtPage'
 import { ContactPage } from '@/pages/ContactPage'
 import { HomePage } from '@/pages/HomePage'
 import { AppProjectPage } from '@/pages/AppProjectPage'
 import { ProjectPage } from '@/pages/ProjectPage'
+import { ServicesPage } from '@/pages/ServicesPage'
 import { WorkPage } from '@/pages/WorkPage'
 
 function RedirectWithSlug({ to }: { to: string }) {
@@ -26,6 +28,8 @@ export default function App() {
           />
           <Route path="products" element={<AppsPage />} />
           <Route path="products/:slug" element={<AppProjectPage />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="about" element={<AboutPage />} />
           <Route path="art" element={<ArtPage />} />
           <Route path="art/:slug" element={<ProjectPage category="art" />} />
           <Route path="work" element={<Navigate to="/experiences" replace />} />

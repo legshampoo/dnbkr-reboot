@@ -3,32 +3,59 @@
 export const BOOKING_URL = 'https://cal.com/dan-baker/intro-chat'
 
 export const homeHero = {
-  name: 'Dan Baker',
-  role: 'AI Product Engineer',
-  tagline:
-    'I help founders and businesses design, build, and launch AI-powered products, agents, and internal tools.',
-  subline: 'From idea to production.',
+  headline: 'AI Products. Built for Real Businesses.',
+  subhead:
+    'I help founders and businesses design, build, and launch AI-powered products, agents, and internal tools that actually get used. From idea to production.',
+}
+
+export type HomeService = {
+  title: string
+  description: string
+  icon: 'agents' | 'apps' | 'voice' | 'tools' | 'prototypes' | 'strategy'
 }
 
 export const homeWhatIDo = {
-  title: 'What I Do',
-  intro:
-    'I work directly with founders, startups, and businesses to turn ideas into working software.',
-  body: "Whether it's an AI agent, internal workflow, customer-facing application, voice AI system, or full product MVP, I help teams move from concept to production quickly.",
+  eyebrow: 'What I Do',
+  title: 'I build AI-powered products and systems that solve real problems.',
   services: [
-    'AI Products & Agents',
-    'Full-Stack Web Applications',
-    'Internal Tools & Automation',
-    'Voice AI Systems',
-    'Product Prototyping & MVPs',
-    'Technical Strategy & Architecture',
-  ],
+    {
+      title: 'AI Agents & Workflows',
+      description: 'Build autonomous systems that handle real business tasks.',
+      icon: 'agents',
+    },
+    {
+      title: 'Web & Mobile Apps',
+      description: 'Full-stack product development with modern tools.',
+      icon: 'apps',
+    },
+    {
+      title: 'Voice AI Systems',
+      description: 'Conversational interfaces powered by LLMs and speech tech.',
+      icon: 'voice',
+    },
+    {
+      title: 'Internal Tools',
+      description: 'Custom dashboards and automation for your team.',
+      icon: 'tools',
+    },
+    {
+      title: 'Rapid Prototypes',
+      description: 'From concept to working demo in weeks, not months.',
+      icon: 'prototypes',
+    },
+    {
+      title: 'Strategy & Architecture',
+      description: 'Technical planning and system design for AI products.',
+      icon: 'strategy',
+    },
+  ] satisfies HomeService[],
 }
 
 export type HomeProject = {
   title: string
   description: string
-  tags: string
+  tags: string[]
+  thumb: string
   cta?: { label: string; href: string; external?: boolean }
 }
 
@@ -36,48 +63,54 @@ export const homeProjects: HomeProject[] = [
   {
     title: 'Editless Studio',
     description:
-      'An AI-powered video production platform that transforms a business website into a scripted, storyboarded, and rendered marketing video.',
-    tags: 'TypeScript • LangGraph • OpenAI • BullMQ • AWS Fargate • FFmpeg',
-    cta: { label: 'View Case Study', href: '/products/editless-studio' },
+      'AI-powered video production platform that transforms a business website into a scripted, storyboarded, and rendered marketing video.',
+    tags: ['TypeScript', 'LangChain', 'AWS', 'FFmpeg', 'OpenAI'],
+    thumb: '/images/apps/editless/thumb.jpg',
+    cta: { label: 'View case study', href: '/products/editless-studio' },
   },
   {
     title: 'IAO Today',
     description:
-      'A local discovery platform designed to help residents and visitors discover events, activities, and experiences.',
-    tags: 'Product Strategy • Full Stack Development • AI-Assisted Workflows',
-    cta: { label: 'View Project', href: '/products/iao-today' },
+      'Local discovery platform helping residents and visitors find events, activities, and experiences in their area.',
+    tags: ['Next.js', 'PostgreSQL', 'Stripe', 'Tailwind'],
+    thumb: '/images/apps/iao-today/iao-thumb.jpg',
+    cta: { label: 'View project', href: '/products/iao-today' },
   },
   {
     title: 'Voice AI Systems',
     description:
       'Customer-facing conversational systems integrating speech recognition, synthesis, workflow automation, and business logic.',
-    tags: 'Voice AI • Telephony • LLM Orchestration',
+    tags: ['Voice AI', 'Twilio', 'OpenAI', 'Pinecone'],
+    thumb: '/images/apps/voice-ai/thumb.svg',
   },
 ]
 
-export const homeWhyWorkWithMe = {
-  title: 'Why Work With Me',
-  intro:
-    "I've spent over a decade building technology products across startups, experiential technology, automation systems, and AI-powered applications.",
-  backgroundIntro: 'My background combines:',
-  strengths: [
-    'Product Thinking',
-    'Design Sensibility',
-    'Software Engineering',
-    'Client-Facing Delivery',
-  ],
-  closing:
-    'I enjoy solving ambiguous problems and turning ideas into working systems.',
-}
+/** Placeholder client names — swap for logos when available. */
+export const homeClients = [
+  'Adidas',
+  'Google',
+  'Samsung',
+  'Dropbox',
+  'MTV',
+  'Barclays',
+  'Converse',
+]
 
-export const homePreviousWork = {
-  title: 'Previous Work',
-  body: 'Before focusing on AI products, I worked as a Creative Technologist and Technical Director in New York, leading the design and deployment of large-scale interactive installations, immersive experiences, and custom technology projects.',
-  note: 'Selected clients and collaborators include global brands, agencies, startups, and cultural institutions.',
+export const homeAbout = {
+  eyebrow: 'About',
+  headline: '10+ years building technology, products, and experiences.',
+  body: 'I work at the intersection of product thinking, software engineering, and client delivery — from large-scale interactive installations and immersive experiences to AI agents, internal tools, and full product MVPs.',
+  cta: { label: 'Learn more about me', href: '/about' },
+  stats: [
+    { value: '10+', label: 'Years of Experience' },
+    { value: '50+', label: 'Projects Delivered' },
+    { value: '30+', label: 'Happy Clients' },
+    { value: '100%', label: 'Focus on Results' },
+  ],
 }
 
 export const homeCta = {
-  title: "Let's Build Something",
-  body: 'Looking for help with an AI product, internal tool, automation system, or technical prototype?',
-  closing: "Let's talk.",
+  title: "Have an idea? Let's build it.",
+  body: "I'm currently available for new projects and consulting engagements.",
+  button: 'Book a Discovery Call',
 }

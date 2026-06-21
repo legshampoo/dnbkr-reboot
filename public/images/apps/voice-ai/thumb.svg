@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1600" viewBox="0 0 2000 1600" role="img" aria-label="Voice AI Systems">
+  <rect width="2000" height="1600" fill="#111111"/>
+  <path d="M400 800 Q500 600 700 800 T1000 800 T1300 800 T1600 800" fill="none" stroke="#0080ff" stroke-width="8" opacity="0.6"/>
+  <path d="M400 850 Q550 680 700 850 T1000 850 T1300 850 T1600 850" fill="none" stroke="#0080ff" stroke-width="4" opacity="0.35"/>
+  <text x="1000" y="820" text-anchor="middle" fill="#737373" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="300" letter-spacing="0.12em">VOICE AI</text>
+</svg>
