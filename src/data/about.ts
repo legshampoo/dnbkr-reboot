@@ -73,6 +73,12 @@ export const aboutProjects: AboutProject[] = [
     href: '/products/iao-today',
   },
   {
+    title: 'AUM Chanting',
+    description:
+      'A real-time social audio platform for a continuous global AUM chanting circle on web, iOS, and Android.',
+    href: '/products/aum-chanting',
+  },
+  {
     title: 'Voice AI Systems',
     description:
       'Customer-facing conversational systems integrating speech recognition, language models, business logic, and workflow automation.',

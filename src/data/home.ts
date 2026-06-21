@@ -77,23 +77,20 @@ export const homeProjects: HomeProject[] = [
     cta: { label: 'View project', href: '/products/iao-today' },
   },
   {
+    title: 'AUM Chanting',
+    description:
+      'A living global chanting circle—join anytime to listen, chant, or meditate alongside others in a continuous 24/7 shared audio space.',
+    tags: ['Next.js', 'WebRTC', 'LiveKit', 'Capacitor', 'AWS'],
+    thumb: '/images/apps/aumchanting/thumb.jpg',
+    cta: { label: 'View project', href: '/products/aum-chanting' },
+  },
+  {
     title: 'Voice AI Systems',
     description:
       'Customer-facing conversational systems integrating speech recognition, synthesis, workflow automation, and business logic.',
     tags: ['Voice AI', 'Twilio', 'OpenAI', 'Pinecone'],
     thumb: '/images/apps/voice-ai/thumb.svg',
   },
-]
-
-/** Placeholder client names — swap for logos when available. */
-export const homeClients = [
-  'Adidas',
-  'Google',
-  'Samsung',
-  'Dropbox',
-  'MTV',
-  'Barclays',
-  'Converse',
 ]
 
 export const homeAbout = {

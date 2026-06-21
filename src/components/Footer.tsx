@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { socialLinks } from '@/data/contact'
-import { SITE_DOMAIN, SITE_NAME } from '@/data/site'
+import { SITE_NAME } from '@/data/site'
 
 const footerLinkClass =
   'text-sm font-light text-neutral-600 transition-colors duration-200 hover:text-neutral-900'
@@ -10,10 +10,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-neutral-200 bg-neutral-50">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-8 py-8 sm:flex-row xl:px-12">
-        <p className="text-sm font-light text-neutral-500">
-          © {year} {SITE_NAME}
-        </p>
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-8 py-8 xl:px-12">
         <nav
           aria-label="Footer"
           className="flex flex-wrap items-center justify-center gap-6"
@@ -33,7 +30,9 @@ export function Footer() {
             Contact
           </Link>
         </nav>
-        <p className="text-sm font-light text-neutral-500">{SITE_DOMAIN}</p>
+        <p className="text-sm font-light text-neutral-500">
+          © {year} {SITE_NAME}
+        </p>
       </div>
     </footer>
   )

@@ -4,7 +4,6 @@ import { contactProfile } from '@/data/contact'
 import {
   BOOKING_URL,
   homeAbout,
-  homeClients,
   homeCta,
   homeHero,
   homeProjects,
@@ -190,28 +189,6 @@ function ProjectsSection() {
   )
 }
 
-function ClientsSection() {
-  return (
-    <section className="border-t border-neutral-200 bg-white">
-      <div className="mx-auto max-w-6xl px-8 py-20 xl:px-12">
-        <p className="text-center text-xs font-medium tracking-[0.2em] text-neutral-400 uppercase">
-          I&apos;ve Worked With
-        </p>
-        <ul className="mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-10">
-          {homeClients.map((name) => (
-            <li
-              key={name}
-              className="flex h-12 min-w-[5.5rem] items-center justify-center rounded-sm border border-neutral-200 bg-neutral-50 px-4 text-xs font-light tracking-wide text-neutral-400 uppercase"
-            >
-              {name}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  )
-}
-
 function AboutSection() {
   return (
     <section className="border-t border-neutral-200 bg-neutral-50">
@@ -292,7 +269,6 @@ export function HomePage() {
       <HeroSection />
       <WhatIDoSection />
       <ProjectsSection />
-      <ClientsSection />
       <AboutSection />
       <CtaSection />
     </div>

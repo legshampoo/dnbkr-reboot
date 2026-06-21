@@ -91,6 +91,11 @@ export type AppProject = {
   technicalChallenges: AppProjectChallenge[]
   architecture: {
     body: string
+    diagram?: {
+      nodes: { id: string; label: string; row: number; col: number }[]
+      caption?: string
+      ariaLabel?: string
+    }
   }
   demo: {
     caption?: string

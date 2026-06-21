@@ -139,6 +139,15 @@ export const servicesProjects: ServiceProject[] = [
     cta: 'View Project',
   },
   {
+    title: 'AUM Chanting',
+    tagline: 'Global Live Chanting Circle',
+    description:
+      'Real-time social audio platform for a continuous 24/7 AUM circle—web, iOS, and Android.',
+    thumb: '/images/apps/aumchanting/thumb.jpg',
+    href: '/products/aum-chanting',
+    cta: 'View Project',
+  },
+  {
     title: 'Voice AI Systems',
     tagline: 'Conversational AI',
     description:

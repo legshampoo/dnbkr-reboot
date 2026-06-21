@@ -156,7 +156,11 @@ export function AppProjectPage() {
 
       <AppProjectSection id="architecture" title="Architecture" wide>
         <div className="mx-auto max-w-3xl">
-          <ArchitectureDiagram />
+          <ArchitectureDiagram
+            nodes={project.architecture.diagram?.nodes}
+            caption={project.architecture.diagram?.caption}
+            ariaLabel={project.architecture.diagram?.ariaLabel}
+          />
           <div className="mt-10">
             <AppProjectText text={project.architecture.body} />
           </div>
