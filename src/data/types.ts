@@ -97,7 +97,7 @@ export type AppProject = {
       ariaLabel?: string
     }
   }
-  demo: {
+  demo?: {
     caption?: string
     screenshot?: string
     vimeoId?: string

@@ -5,9 +5,26 @@ import { AppProjectText } from '@/components/app-project/AppProjectText'
 import { ArchitectureDiagram } from '@/components/app-project/ArchitectureDiagram'
 import { SolutionDiagram } from '@/components/app-project/SolutionDiagram'
 import { VideoEmbed } from '@/components/VideoEmbed'
+import type { ProjectLink } from '@/data/types'
 import { getAppProject } from '@/data/appsProjects'
 import { categoryMeta } from '@/data/projects'
 import { SITE_NAME } from '@/data/site'
+
+function ProjectSiteLink({ link }: { link: ProjectLink }) {
+  return (
+    <a
+      href={link.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="dnbkr-btn-black normal-case"
+    >
+      {link.label}
+      <span aria-hidden className="ml-1.5">
+        →
+      </span>
+    </a>
+  )
+}
 
 export function AppProjectPage() {
   const { slug } = useParams<{ slug: string }>()
@@ -34,7 +51,16 @@ export function AppProjectPage() {
     )
   }
 
-  const hasVideo = Boolean(project.demo.vimeoId || project.demo.youtubeId)
+  const hasVideo = Boolean(
+    project.demo?.vimeoId || project.demo?.youtubeId,
+  )
+  const hasDemo = Boolean(
+    project.demo &&
+      (hasVideo ||
+        project.demo.screenshot ||
+        project.demo.caption ||
+        project.demo.gallery?.length),
+  )
 
   return (
     <article>
@@ -58,17 +84,9 @@ export function AppProjectPage() {
           </p>
         ) : null}
         {project.links?.length ? (
-          <div className="mt-4 flex flex-col items-center gap-2">
+          <div className="mt-8 flex flex-col items-center gap-3">
             {project.links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="dnbkr-link text-base font-light italic tracking-wide"
-              >
-                {link.label}
-              </a>
+              <ProjectSiteLink key={link.href} link={link} />
             ))}
           </div>
         ) : null}
@@ -102,21 +120,6 @@ export function AppProjectPage() {
             </dd>
           </div>
         </dl>
-        {project.links?.length ? (
-          <div className="mt-10 flex flex-col items-start gap-3 border-t border-neutral-200/80 pt-10">
-            {project.links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="dnbkr-link text-sm"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        ) : null}
       </AppProjectSection>
 
       <AppProjectSection id="problem" title="The Problem">
@@ -167,41 +170,43 @@ export function AppProjectPage() {
         </div>
       </AppProjectSection>
 
-      <AppProjectSection id="demo" title="Demo" wide>
-        {hasVideo ? (
-          <VideoEmbed
-            vimeoId={project.demo.vimeoId}
-            youtubeId={project.demo.youtubeId}
-            title={project.title}
-            className="mx-auto max-w-3xl shadow-md"
-          />
-        ) : project.demo.screenshot ? (
-          <figure className="mx-auto max-w-4xl overflow-hidden rounded-sm bg-neutral-100">
-            <img
-              src={project.demo.screenshot}
-              alt=""
-              className="mx-auto block h-auto w-full object-contain"
+      {hasDemo ? (
+        <AppProjectSection id="demo" title="Demo" wide>
+          {hasVideo ? (
+            <VideoEmbed
+              vimeoId={project.demo!.vimeoId}
+              youtubeId={project.demo!.youtubeId}
+              title={project.title}
+              className="mx-auto max-w-3xl shadow-md"
             />
-          </figure>
-        ) : null}
-        {project.demo.caption ? (
-          <p className="dnbkr-lead mx-auto mt-8 max-w-xl text-center text-neutral-500">
-            {project.demo.caption}
-          </p>
-        ) : null}
-        {project.demo.gallery?.length ? (
-          <div className="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-3">
-            {project.demo.gallery.map((src, i) => (
-              <figure
-                key={i}
-                className="aspect-[4/3] overflow-hidden rounded-sm bg-neutral-100"
-              >
-                <img src={src} alt="" className="h-full w-full object-cover" />
-              </figure>
-            ))}
-          </div>
-        ) : null}
-      </AppProjectSection>
+          ) : project.demo!.screenshot ? (
+            <figure className="mx-auto max-w-4xl overflow-hidden rounded-sm bg-neutral-100">
+              <img
+                src={project.demo!.screenshot}
+                alt=""
+                className="mx-auto block h-auto w-full object-contain"
+              />
+            </figure>
+          ) : null}
+          {project.demo!.caption ? (
+            <p className="dnbkr-lead mx-auto mt-8 max-w-xl text-center text-neutral-500">
+              {project.demo!.caption}
+            </p>
+          ) : null}
+          {project.demo!.gallery?.length ? (
+            <div className="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-3">
+              {project.demo!.gallery!.map((src, i) => (
+                <figure
+                  key={i}
+                  className="aspect-[4/3] overflow-hidden rounded-sm bg-neutral-100"
+                >
+                  <img src={src} alt="" className="h-full w-full object-cover" />
+                </figure>
+              ))}
+            </div>
+          ) : null}
+        </AppProjectSection>
+      ) : null}
 
       <AppProjectSection id="lessons" title="Lessons Learned">
         <AppProjectText text={project.lessonsLearned} />
